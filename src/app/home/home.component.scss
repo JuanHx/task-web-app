@@ -1,0 +1,15 @@
+.dashboard-container {
+  background-color: #121A21;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.h1 {
+  color: #94ADC7;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}

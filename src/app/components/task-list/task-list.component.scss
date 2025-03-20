@@ -1,0 +1,123 @@
+@use "sass:color";
+
+// Definir colores
+$background-dark: #121A21;
+$task-bg: #1e1e1e;
+$text-light: #e0e0e0;
+$text-muted: #94ADC7;
+$border-color: #333;
+$checkbox-color: #007bff;
+
+.custom-input {
+  background-color: #243647;
+  color: #94ADC7;
+  height: 60px;
+  width: 60vw;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: #94ADC7;
+  }
+}
+
+.button-add {
+  background-color: #243647;
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-weight: 400;
+  border: none;
+  margin-left: 12px;
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.button-group .btn {
+  background-color: #243647;
+  color: #FFFFFF;
+  border-radius: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  margin-right: 12px;
+}
+
+.button-group .btn:last-child {
+  margin-right: 0;
+}
+
+.button-group .btn:focus, .button-group .btn:active {
+  background-color: #1a2a38;
+  outline: none;
+}
+
+.task-list {
+  padding: 20px;
+  border-radius: 8px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: color.adjust($task-bg, $lightness: 5%);
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $text-muted;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    background-color: $background-dark;
+
+    &:checked {
+      background-color: $checkbox-color;
+    }
+  }
+
+  .task-info {
+    flex-grow: 1;
+    h4 {
+      margin: 0;
+      font-size: 16px;
+      color: $text-light;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500; // Inter Medium
+    }
+    p {
+      margin: 2px 0 0;
+      font-size: 14px;
+      color: $text-muted;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400; // Inter Regular
+    }
+  }
+
+  .task-date {
+    font-size: 14px;
+    color: $text-muted;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; // Inter Regular
+  }
+}
+

@@ -1,0 +1,73 @@
+<div class="task-container">
+  <!-- Input de busqueda -->
+  <div class="search-bar mt-3 d-flex align-items-center">
+    <input
+      type="text"
+      class="form-control custom-input"
+      placeholder="Search task..."
+      formControlName="searchQuery"
+    />
+    <button
+      class="btn btn-primary ml-2 button-add"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      <i
+        class="bi bi-plus-circle"
+        style="font-size: 2rem; color: cornflowerblue"
+      ></i>
+    </button>
+  </div>
+
+  <!-- Botones Completado y Pendiente -->
+  <div class="button-group mt-3">
+    <button class="btn btn-secondary">Todos</button>
+    <button class="btn btn-secondary">Completado</button>
+    <button class="btn btn-secondary">Pendiente</button>
+  </div>
+
+  <!-- Contenedor de Tareas -->
+  <div class="task-list">
+    <div class="task-item" *ngFor="let task of tasks">
+      <input class="form-check-input" type="checkbox" id="task1" />
+      <div class="task-info">
+        <h4>{{ task.titulo }}</h4>
+        <p>{{ task.descripcion }}</p>
+      </div>
+      <span class="task-date"
+        >{{ getDaysSinceCreation(task.fecha_creacion) }} días desde su
+        creación</span
+      >
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-hidden="true"
+    aria-labelledby="exampleModalLabel"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nueva Tarea</h5>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido de la modal -->
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
