@@ -1,0 +1,131 @@
+.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &-loading {
+    background-color: #0069d9;
+    color: white;
+    cursor: not-allowed;
+  }
+
+  &-success {
+    background-color: #28a745;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  &-error {
+    background-color: #dc3545;
+    color: white;
+    transform: scale(1.05);
+  }
+}
+
+// Animación del spinner
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: #121a21;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-close i {
+  font-size: 35px;
+}
+.custom-input {
+  background-color: #243647;
+  color: #ffffff;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: #94adc7;
+  }
+}
+
+.custom-textarea {
+  background-color: #243647;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: #94adc7;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+  border: 1px solid #334d66;
+  border-radius: 12px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  overflow: hidden;
+}
+
+.form-check-input {
+  margin-right: 10px;
+  background-color: #243647;
+}
+
+.form-check-label {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.custom-label {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}

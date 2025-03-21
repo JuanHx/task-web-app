@@ -14,4 +14,12 @@ export class TaskService {
   getTareas(): Observable<Tarea[]> {
     return this.http.get<Tarea[]>(this.apiUrl);
   }
+
+  addTarea(tarea: Tarea): Observable<Tarea> {
+    return this.http.post<Tarea>(this.apiUrl, tarea);
+  }
+
+  deleteMultipleTareas(ids: number[]) {
+    return this.http.delete<Tarea>(this.apiUrl, { body: ids });
+  }
 }

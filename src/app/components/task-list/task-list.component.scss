@@ -1,32 +1,31 @@
 @use "sass:color";
 
-// Definir colores
-$background-dark: #121A21;
+$background-dark: #121a21;
 $task-bg: #1e1e1e;
 $text-light: #e0e0e0;
-$text-muted: #94ADC7;
+$text-muted: #94adc7;
 $border-color: #333;
 $checkbox-color: #007bff;
 
 .custom-input {
   background-color: #243647;
-  color: #94ADC7;
+  color: #94adc7;
   height: 60px;
   width: 60vw;
   border: none;
   border-radius: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
 
   &::placeholder {
-    color: #94ADC7;
+    color: #94adc7;
   }
 }
 
 .button-add {
   background-color: #243647;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 15px;
   font-weight: 400;
   border: none;
@@ -40,9 +39,9 @@ $checkbox-color: #007bff;
 
 .button-group .btn {
   background-color: #243647;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   border: none;
@@ -53,9 +52,31 @@ $checkbox-color: #007bff;
   margin-right: 0;
 }
 
-.button-group .btn:focus, .button-group .btn:active {
+.button-group .btn:focus,
+.button-group .btn:active {
   background-color: #1a2a38;
   outline: none;
+}
+
+.btn-trash {
+  background-color: #243647;
+  color: #ffffff;
+  border: none;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.btn-trash:hover {
+  background-color: red;
+}
+
+.btn-trash i {
+  font-size: 1.3rem;
 }
 
 .task-list {
@@ -101,23 +122,22 @@ $checkbox-color: #007bff;
       margin: 0;
       font-size: 16px;
       color: $text-light;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500; // Inter Medium
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
     }
     p {
       margin: 2px 0 0;
       font-size: 14px;
       color: $text-muted;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400; // Inter Regular
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
     }
   }
 
-  .task-date {
+  .task-state {
     font-size: 14px;
     color: $text-muted;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400; // Inter Regular
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
   }
 }
-

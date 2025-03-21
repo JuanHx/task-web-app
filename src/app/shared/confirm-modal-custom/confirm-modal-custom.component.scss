@@ -1,0 +1,37 @@
+.modal-dialog {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: #121a21;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-close i {
+  font-size: 35px;
+}
+
+.modal-body {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
