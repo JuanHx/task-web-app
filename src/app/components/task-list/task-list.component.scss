@@ -52,10 +52,14 @@ $checkbox-color: #007bff;
   margin-right: 0;
 }
 
-.button-group .btn:focus,
-.button-group .btn:active {
-  background-color: #1a2a38;
-  outline: none;
+.button-group .btn-primary {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.button-group .btn-outline-primary {
+  background-color: #243647;
+  color: white;
 }
 
 .btn-trash {
@@ -95,6 +99,7 @@ $checkbox-color: #007bff;
   padding: 12px;
   border-radius: 6px;
   transition: background 0.3s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background: color.adjust($task-bg, $lightness: 5%);
@@ -140,4 +145,52 @@ $checkbox-color: #007bff;
     font-family: "Inter", sans-serif;
     font-weight: 400;
   }
+
+  .task-list {
+    position: relative;
+  }
+
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+
+  .btn-options {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    background-color: #243647;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      text-align: left;
+      width: 100%;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+    }
+
+    a:hover {
+      background: #1a2a38;
+    }
+  }
+}
+
+.no-results {
+  margin: 0;
+  font-size: 25px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
 }

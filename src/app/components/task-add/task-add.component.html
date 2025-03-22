@@ -1,12 +1,11 @@
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title">Nueva Tarea</h5>
+      <h5 class="modal-title">{{ isEditMode ? 'Editar' : 'Nueva' }} Tarea</h5>
       <button
         type="button"
         class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
+        (click)="closeModal()"
       >
         <i class="bi bi-x-circle"></i>
       </button>
@@ -102,7 +101,7 @@
           ></span>
           <i *ngIf="isSuccess" class="bi bi-check-circle"></i>
           <i *ngIf="isError" class="bi bi-x-circle"></i>
-          <span *ngIf="!isLoading && !isSuccess && !isError">Crear</span>
+          <span *ngIf="!isLoading && !isSuccess && !isError">{{isEditMode ? 'Editar' : 'Crear'}}</span>
         </button>
       </form>
     </div>

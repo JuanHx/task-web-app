@@ -22,4 +22,8 @@ export class TaskService {
   deleteMultipleTareas(ids: number[]) {
     return this.http.delete<Tarea>(this.apiUrl, { body: ids });
   }
+
+  updateTarea(tarea: Tarea): Observable<Tarea> {
+    return this.http.put<Tarea>(`${this.apiUrl}/${tarea.id}`, tarea);
+  }
 }
